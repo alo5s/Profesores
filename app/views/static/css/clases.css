@@ -1,0 +1,95 @@
+section{
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+}
+.content-task{
+    box-shadow: 11px 2px 20px 2px #bfbfbf;
+    width: 450px;
+    /* display: flex; */
+    background-color: #FFF;
+    padding: 25px 25px;
+    border: 1px solid;
+}
+
+input, select{
+    padding: 3px 5px;
+}
+.pd-bt{
+    padding-bottom: 1.2vh;
+}
+
+/*form estudiante*/
+#task-grupo{
+    display: none;
+}
+
+/*Estilo del form*/
+
+#task-form{
+    min-width: 50%;
+    border: 1px solid #9b9a9a;
+}
+.fomr-clase{
+    padding-top: 10px;
+}
+
+.to-fa{
+    display: flex;
+    justify-content: flex-start;
+}
+.to-fa div {
+    display: grid;
+    padding-right: 27px;
+}
+.to-fa div select {
+    height: 32px;
+}
+
+/*------------*/
+
+
+
+#estudiante-fields{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-form-task{
+    display: flex;
+    flex-direction: column;
+}
+.text-form-task input {
+    margin-bottom: 10px;
+}
+
+
+
+
+.content-btn{
+    display: flex;
+    margin-top: 25px;
+    
+}
+
+.content-btn button {
+    color: #ffffff;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;    
+    background-color: #3b3b65;
+    border-color: #46b8da;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 400;
+    border: 1px solid transparent;
+}
+.content-btn button:hover{
+    background: #d13333;
+    cursor: pointer;
+}
+
+
+

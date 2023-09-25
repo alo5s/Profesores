@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block customCSS %}   
+    <link rel="stylesheet" href="/static/css/view-clase.css">
+{% endblock %}
+{% block body %}
+<section class="content_view_task">
+    <div class="content-data-user">
+        <img src="/static/img/per3.svg" alt="/img/">
+        {% for element in  datos[0] %}
+        <ul>
+            <li class="content-data"><h4 class="id_primari">Nombre: </h4><h4>{{element.1}}</h4></li>
+            <li class="content-data"><h4 class="id_primari">Apellido: </h4><h4>{{element.2}}</h4></li>
+        </ul>
+        {% endfor %}
+    </div>
+    <div class="cart-task">
+        {% for dato in datos[1] %}
+        <ul>
+            <li>
+                <h5>{{ dato.4.strftime('%d-%m-%Y')}}</h5>
+                <h2>{{dato.1}}</h2>
+                <p>{{dato.2}}</p>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'layout.html' %}
+{% block customCSS %}
+    <link rel="stylesheet" href="/static/css/alumnos.css">
+{% endblock %}
+{% block body %}
+<section class="content-estudiante">
+    <div class="conente-grupo">
+        <div class="content-tabla">
+            <table>
+                <thead>
+                    <tr>
+                      <th class="centered" colspan="3">Estudiante</th>
+                      <!-- El encabezado abarca dos columnas y se centra -->
+                    </tr>
+                </thead>
+                <tr>
+                    <td class="content-td">Nombre</td>
+                    <td class="content-td">Apellido</td>
+                    <td class="content-td">clases</td>
+                </tr>
+                <tbody>
+                    {% for alumno in alumnos %}
+                    <tr>
+                        <td>{{alumno.1}}</td>
+                        <td>{{alumno.2}}</td>
+                        <td>
+                            <a href="/alumno/view-clases/{{alumno.0}}" class="view"><i class="material-icons"></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="content-tabla"> 
+            <table>
+                <thead>
+                    <tr>
+                      <th class="centered" colspan="3">Grupo</th>
+                      <!-- El encabezado abarca dos columnas y se centra -->
+                    </tr>
+                </thead>
+                <tr>
+                    <td class="content-td">Grupo</td>
+                    <td class="content-td">N° Integrante</td>
+                    <td class="content-td">clases</td>
+                </tr>
+                <tbody>
+                    {% for grupo in grupos %}
+                    <tr>
+                        <td>{{grupo.1}}</td>
+                        <td>{{grupo.2}}</td>
+                        <td>
+                            <a href="/grupo/view-clases/{{grupo.0}}" class="view"><i class="material-icons"></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>       
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock %}

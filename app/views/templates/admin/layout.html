@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <link rel="icon" href="/static/img/icon.png">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+
+    <link rel="stylesheet" href="/static/css/layout.css">
+    
+    <script defer src="static/js/index.js"></script>
+
+    <title>Registros de Clases</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!--customCSS-->
+    {% block customCSS %}
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <div class="content-menu-logo">
+            <div class="Logo-Menu">
+                <h1 class="logo">Admi<span class="up">n</span></h1> 
+            </div>
+            <div class="btn-menu " >
+              <button class="nav-toggle">
+              </button>
+            </div>
+        </div>
+        <div class="content-nav-login" >
+            <nav >
+                <ul class="content-ul-li-a ">
+                    <!--<li><a class="link" href="/admin/home">Inicio</a></li>---->
+                    <li><a class="link" href="/admin/profesores">Profesores</a></li>
+                    <li><a class="link" href="/admin/alumnos">Alumnos</a></li>
+                    <li><a class="link" href="/admin/grupos">Grupos</a></li>
+                    
+                    <!------- LOGIN -------->
+                    
+                    {% if 'username' in session %}
+                    <li><a href="/admin/logout" class="btn-header" >Cerr sesión</a></li>
+                    {% endif %}
+                </ul>
+            </nav> 
+        </div>
+    </header>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

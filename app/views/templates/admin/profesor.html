@@ -1,0 +1,55 @@
+{% extends 'admin/layout.html' %}
+{% block customCSS %}
+    <link rel="stylesheet" href="/static/css/ad-style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="/static/js/index.js"></script>
+{% endblock %}
+{% block body %}
+<section>
+    <div class="content">
+        <div class="content-form-table">
+            <div>
+                <form action="/admin/add_profesor" class="content-form" method="post">
+                    <div class="pd">
+                        <input type="text" name="dato-1" placeholder="Nombre completo del Profesor" required="required">
+                    </div>
+                    <div class="pd">
+                        <input type="text" name="dato-2" placeholder="Password" required="required">
+                    </div>
+                    <div class="pd">
+                        <button  class="btn btn-info add-new">Agregar Profesor</button>
+                    </div>
+                </form>
+            </div>
+            <div class="content-table">
+                <div class="scroll-container">
+                    <table>
+                        <thead>
+                            <tr class="contente-th">
+                                <th>Nombre y apellido</th><th>Contraseña</th><th>N° Clases </th><th>Tiempo</th><th class="br-rt">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for dato in datos %}
+                            <tr>
+                                <form action="/admin/updata/profesor/{{dato.0}}" method="post">
+                                    <td><input type="text" name="dato-1" value="{{dato.1}}" class="input-form"></td>
+                                    <td><input type="text" name="dato-2" value="{{dato.2}}" class="input-form"></td>
+                                    <td>{{dato.3}}</td>
+                                    <td>{{dato.4}} min</td>
+                                    <td class="btn-tabla">
+                                        <a href="/admin/profesor/clases/{{dato.0}}"><button type="button" >Datos</button></a> 
+                                        <a href="/admin/delete/profesor/{{dato.0}}"><button type="button" >Borra</button></a> 
+                                        <button type="submit">Editar</button>
+                                    </td>
+                                </form>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>    
+</section>
+{% endblock %}

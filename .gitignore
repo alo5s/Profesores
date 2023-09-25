@@ -1,0 +1,132 @@
+### Flask ###
+instance/*
+!instance/.gitignore
+.webassets-cache
+.env
+db.sql
+### Pila Flask.Python ###
+# Archivos byte-compiled / optimizados / DLL
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Extensiones C
+*.so
+
+# Distribución / empaquetado
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Normalmente, estos archivos son escritos por un script de Python a partir de una plantilla
+#  antes de que PyInstaller compile el ejecutable, para inyectarle fecha u otra información.
+*.manifest
+*.spec
+
+# Registros de instalación
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Informes de pruebas unitarias / cobertura
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Traducciones
+*.mo
+*.pot
+
+# Cosas de Django:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Cosas de Flask:
+instance/
+
+# Cosas de Scrapy:
+.scrapy
+
+# Documentación de Sphinx
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# PEP 582; utilizado por ejemplos github.com/David-OConnor/pyflow y github.com/pdm-project/pdm
+__pypackages__/
+
+# Cosas de Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Archivos interpretados por SageMath
+*.sage.py
+
+# Entornos
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Configuraciones del proyecto Spyder
+.spyderproject
+.spyproject
+
+# Configuraciones del proyecto Rope
+.ropeproject
+
+# Documentación de mkdocs
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Comprobador de tipos estáticos de Pyre
+.pyre/
+
+# Analizador de tipos estáticos pytype
+.pytype/
+
+# Símbolos de depuración de Cython
+cython_debug/
+

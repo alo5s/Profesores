@@ -1,0 +1,117 @@
+.content_view_task{
+    display: flex;
+     /*esto es prueba  background: #3c3443;*/
+    min-height: 100vh;
+    align-items: flex-start;
+  }
+  .content-data-user { 
+     position: absolute; /*esto es prueba*/
+    background: #ffffff ; 
+    display: flex;
+    align-items: center;
+    width: 500px;
+    border: 1px solid;
+    margin: 10px;
+    height: 200px;
+      
+  }
+  .content-data {
+     margin-top: 5px;
+     border-bottom: 1px solid;
+     display: flex;
+     list-style: none;
+  }
+  h4 {
+     padding-right: 15px;
+     font-family: cursive;
+     font-size: 23px;
+  
+  }
+  .id_primari {
+  
+     color: #5282bd;
+  }
+  
+  
+  /*************** task-card *************/
+  
+  .cart-task{
+  
+    margin-top: 220px; /*esto es prueba*/
+    display: flex;
+    font-family:arial,sans-serif;
+    font-size:100%;
+    color:#fff;
+    flex-wrap:wrap;
+  
+  }
+  
+  .cart-task h2,p{
+    font-size:100%;
+    font-weight:normal;
+    word-wrap: break-word;
+    
+  }
+  
+  .cart-task ul,li{
+    
+  
+    
+    list-style:none;
+  }
+  
+  .cart-task ul li {
+    
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:15em;
+    width:15em;
+    padding:1em;
+  }
+  
+  .cart-task ul li{
+    
+    margin:10px;
+    margin-top: 15px;
+  
+  }
+  .cart-task ul li h2{
+    font-size:90%;
+    font-weight:bold;
+    padding-bottom:10px;
+  }
+  
+  
+  .cart-task ul li {
+    text-decoration:none;
+    color:#000;
+    background:#ffc;
+    display:block;
+    height:15em;
+    width:15em;
+    /* Firefox */
+    -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+    /* Safari+Chrome */
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    /* Opera */
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  }
+  
+  
+  .cart-task ul li h5{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid;
+  }
+
+  @media (max-width: 768px){
+    .content-data-user{
+      display: none;
+    }
+    .cart-task{
+      margin-top: 0vh;
+      justify-content: center;
+    }
+  }

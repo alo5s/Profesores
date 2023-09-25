@@ -1,0 +1,116 @@
+
+.content-form-table{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 3%;
+}
+
+.content-form{
+    width: 350px;
+    background-color: rgb(185, 184, 184);
+    padding: 20px 20px;
+}
+
+.pd {
+    padding: 10px 0;
+    display: flex;
+    width: 100%;
+}
+.content-form input[type="text"] {
+    padding: 9px 5px;
+    width: 100%;
+}
+.content-form button{
+    padding: 10px 0;
+    width: 100%;
+}
+
+
+/*Tabla-Header*/
+table{
+    border-collapse: collapse;
+    min-width: 820px;
+    /* background-color: rgb(185, 184, 184); */
+    text-align: center;
+}
+
+th, td{
+	padding: 5px 0px;
+}
+.contente-th th{
+    color: #464646;
+    font-family: cursive;
+    padding: 12px 10px;
+    font-size: 14px;
+    border-collapse: collapse;
+    position: sticky;
+    top: 0;
+    background-color: rgb(185, 184, 184);;
+    z-index: 1;
+}
+/*
+.br-lt{
+    border-top-left-radius: 10px;
+}
+.br-rt{
+    border-top-right-radius: 10px;
+}
+*/
+
+thead{
+	border-bottom: solid 1px #0F362D;
+    font-family: 'Open Sans', sans-serif;
+}
+
+tr {
+    border: 1px solid;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    
+}
+tr:nth-child(even){
+	background-color: #ededed8c;
+}
+
+.scroll-container {
+    max-height: 450px; /* Altura máxima deseada */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+}
+
+.btn-tabla button{
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 5px 5px rgb(0 0 0 / 20%);
+    background: #ffffff;
+}
+.btn-tabla button:hover{
+    color: wheat;
+    background: red;
+    cursor: pointer;
+}
+
+
+.btn-a{
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    border-radius: 5px;
+    padding: 5.4px;
+    box-shadow: 0px 5px 5px rgb(0 0 0 / 20%);
+    background: #ffffff;
+    color: black;
+
+}
+.btn-a:hover{
+    color: wheat;
+    background: red;
+    cursor: pointer;
+}
+
+.input-form{
+    background: #ededed00;
+    border: none;
+    text-align: center;
+}
+.input-form:focus {
+    outline: 1px solid; 
+}

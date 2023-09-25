@@ -1,0 +1,50 @@
+.content-estudiante{
+    display: flex;
+    justify-content: center;
+    text-align: center;    
+}
+
+.centered{
+    padding: 8px;
+    background: #8a8abd;
+    font-family: cursive;
+    font-size: 22px;
+}
+
+tbody{
+    background: #ffffff;
+}
+
+.conente-grupo {
+    display: flex;
+}
+
+.content-tabla {
+    padding: 40px 40px;
+    
+}
+
+.content-tabla table{
+    box-shadow: 0px 6px 4px 1px #bfbfbf;
+    border-collapse: collapse;
+    width: 500px;
+}
+.content-td {
+    font-family:monospace;
+    font-size: 20px;
+    padding: 5px;
+}
+.view {
+    color: #03A9F4;
+}
+@media (max-width: 768px){
+    .conente-grupo,.content-tabla {
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .content-tabla h1 {
+        padding-left: 100%;
+        padding-right: 100%;   
+    }
+}   

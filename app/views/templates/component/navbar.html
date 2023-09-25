@@ -1,0 +1,26 @@
+<header>
+    <div class="content-menu-logo">
+        <div class="Logo-Menu">
+            <h1 class="logo">Registros<span class="up">Up</span></h1> 
+        </div>
+        <div class="btn-menu " >
+          <button class="nav-toggle">
+          </button>
+        </div>
+    </div>
+    <div class="content-nav-login" >
+        <nav >
+            <ul class="content-ul-li-a ">
+                <li><a class="link" href="/">Inicio</a></li>
+                <li><a class="link" href="/clases">Clases</a></li>
+                <li><a class="link" href="/alumnos">Alumnos</a></li>
+                
+                <!------- LOGIN -------->
+                {% if 'username' in session %}
+                    <li><a href="/logout" class="btn-header" >Cerr sesión</a></li>
+                {% endif %}
+            </ul>
+        </nav> 
+    </div>
+</header>
+

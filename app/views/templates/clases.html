@@ -1,0 +1,95 @@
+{% extends 'layout.html' %}
+{% block customCSS %}
+    <link rel="stylesheet" href="static/css/clases.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% endblock %}
+{% block body%}
+<section> 
+    <!-- Script para mostrar la alerta en caso de éxito -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: '{{ messages[0][1] }}',
+          });
+    </script>
+    {% endif %}
+    {% endwith %}
+    <div class="content-task" onchange="showFields()">
+        <select id="task-form">
+            <option value="estudiantes">Estudiante</option>
+            <option value="grupo">Grupo</option>
+        </select> 
+        <form id="task-estudiante"  method="POST" action="/clase/estudiante" class="fomr-clase">
+            <div id="estudiante-fields" class="pd-bt">
+                <label >Alumno</label>
+                <select name="alumnoSelect" id="alumnoSelect">
+                    {% for item in estudiantes %}
+                        <option value="{{item.0}}">{{item.1}} {{item.2}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="to-fa pd-bt">
+                <div>
+                    <label >Tiempo</label>
+                    <select id="numero-input-time" name="tiempo" type="number" required="required">
+                        <option >--:--</option>
+                        <option >120</option>
+                        <option >90</option>
+                        <option >60</option>
+                        <option >50</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Fecha</label>
+                    <input type="date" id="fecha" name="fecha" placeholder="Selecciona una fecha"  required="required">
+                </div>
+            </div>
+            <div class="text-form-task">
+                <label class="titulo-form">Tarea</label>
+                <input type="text" placeholder="Tema" name="tema" required="required">
+                <textarea cols="30" rows="10" name="descripcion" placeholder="Descripcion de Tarea" class="input-field"></textarea>
+            </div>
+            <div class="content-btn">
+                <button id="btn-save-alert">Listo</button>
+            </div>
+        </form>
+        <form id="task-grupo"  method="POST" action="/clase/grupo" class="fomr-clase">
+            <div id="estudiante-fields"  class="pd-bt">
+                <label >Grupo</label>
+                <select name="grupoSelect" id="grupoSelect">
+                    {% for item in grupos %}
+                        <option value="{{item.0}}">{{item.1}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="to-fa pd-bt">
+                <div>
+                    <label >Tiempo</label>
+                    <select id="numero-input-time" name="tiempo" type="number" required="required">
+                        <option >--:--</option>
+                        <option >120</option>
+                        <option >90</option>
+                        <option >60</option>
+                        <option >50</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Fecha</label>
+                    <input type="date" id="fecha" name="fecha" placeholder="Selecciona una fecha"  required="required">
+                </div>
+            </div>
+            <div class="text-form-task">
+                <label class="titulo-form">Tarea</label>
+                <input type="text" placeholder="Tema" name="tema" required="required">
+                <textarea cols="30" rows="10" name="descripcion" placeholder="Descripción de Tarea" required="required" class="input-field"></textarea>
+            </div>
+            <div class="content-btn">
+                <button id="btn-save-alert">Listo</button>
+            </div>
+        </form>
+    </div>
+
+</section>
+{% endblock %}
