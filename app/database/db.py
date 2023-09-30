@@ -10,7 +10,7 @@ def get_db_connection():
         db_connection = mysql.connector.connect(
             host=os.environ.get('MYSQLHOST'),
             user=os.environ.get('MYSQLUSER'),
-            #password=os.environ.get('MYSQLPASSWORD'),
+            password=os.environ.get('MYSQLPASSWORD'),
             database=os.environ.get('MYSQLDATABASE'),
             port=os.environ.get('MYSQLPORT'),
             #connect_timeout=3600 # Timeout en segundos
